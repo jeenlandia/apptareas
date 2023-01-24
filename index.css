@@ -1,0 +1,104 @@
+*{
+    padding:0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    color: var(--text);
+    background-color: var(--background);
+}
+
+
+/* header */
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+[data-theme="light"]{
+    --primary: #13011a;
+    --background: #fff;
+    --text: #0c000e;
+}
+
+[data-theme="dark"]{
+    --primary: #0c000e;
+    --background: #0c000e;
+    --text: #fff;
+} 
+
+.modo-dark{
+    display: flex;
+    justify-content: end;
+}
+
+/* switch */
+
+.switch{
+    height: 30px;
+    width: 60px;
+    position: relative;
+    display: inline-block;
+}
+
+.switch input{
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.slider{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+    background-color: var(--background);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before{
+    height: 28px;
+    width: 28;
+    left: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    position: absolute;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider{
+    background-color: var(--background);
+}
+
+input:checked + .slider:before{
+    -ms-transform: translateX(28px);
+    transform: translateX(28px);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* buttons */
+
+/* form */
+
+/* card 
+
+.conteiner-card{
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+*/
