@@ -1,13 +1,13 @@
-const preferedColor = window.matchMedia('(prefered-color: dark)').matches ? 'dark' : 'light';
+const preferedColor = window.matchMedia('(prefers-color: dark)').matches ? 'dark' : 'light';
 
 const slider = document.getElementById('slider');
 
-const setThemeColor = (theme) =>{
+const setThemeColor = (theme) => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
 }
 
-slider.addEventListener('click', () =>{
+slider.addEventListener('click', () => {
     let switchTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
     setThemeColor(switchTheme);
 });

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +9,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
     <script src="dark.js" type="text/javascript" defer></script>
-    <title>Document</title>
+    <title>app</title>
 </head>
+
 <body>
     <header>
         <div class="title">
-            <p>App de tareas</p>
+            <p class="pTitle">App de tareas</p>
         </div>
-        <div class="modo-dark">
-            <label class="switch">
-                <input type="checkbox" id="slider" checked value="Bike">
-                <span class="slider"></span>
-            </label>
-        </div>
+
+        <label class="switch">
+            <input type="checkbox" id="slider" checked>
+            <span class="slider"></span>
+        </label>
     </header>
 
-    <main>
-        <p>Organiza tus tareas</p>
-    </main>
+    <div class="containerList">
 
-<script src="app.js"></script>
+        <div class="date">
+            <div class="oneDate">
+                <div id="dateNum"></div>
+                <div>
+                    <div id="dateMonth"></div>
+                    <div id="dateYear"></div>
+                </div>
+                <div id="dateDay"></div>
+            </div>
+        </div>
+
+        <form onsubmit="newTask(event)">
+            <input type="text" name="taskText" autocomplete="off" placeholder="Agregar tarea">
+            <button type="submit" class="taskButton">+</button>
+            <button type="button" class="orderButton" onclick="orderedTasks()">Ordenar</button>
+        </form>
+        
+        <div id="containerTasks"></div>
+
+    </div>
+
+
+    <script src="app.js"></script>
 </body>
+
 </html>
