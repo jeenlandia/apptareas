@@ -111,9 +111,10 @@ input:checked + .slider:before {
 .containerList {
     background-color: var(--background);
     color: var(--text);
-    width: 100%;
     margin: 35px auto;
-    padding: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .date {
